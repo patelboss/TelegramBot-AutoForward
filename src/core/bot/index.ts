@@ -11,12 +11,12 @@ const bot = new Bot(String(process.env.BOT_TOKEN));
 
 bot.init()
     .then((client) => {
-        console.log(`Berhasil masuk sebagai ${bot.botInfo.username} - ${bot.botInfo.id}`);
+        console.log(`Successfully logged in as ${bot.botInfo.username} - ${bot.botInfo.id}`);
     })
     .catch((err) => console.error(err));
 
 bot.api.setMyCommands([
-    { command: "start", description: "Mulai bot ini" },
+    { command: "start", description: "Start this bot" },
     { command: "connect", description: "setup account" },
     { command: "forward", description: "setup auto forward" },
     { command: "getuser", description: "Get User ID" },
